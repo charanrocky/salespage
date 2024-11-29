@@ -1,0 +1,1311 @@
+<style>
+  /* Main container for the hero section */
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 1192px;
+    width: 100%;
+    align-items: center;
+    padding: 72px 80px 0;
+  }
+  /* Background image of the hero section */
+  .hero-background {
+    background-image: url("./img/img17.png");
+    background-repeat: no-repeat;
+    background-size: 84%;
+    background-position: top;
+    position: absolute;
+    background-color: #fff;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  /* Wrapper for content in the hero section */
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    width: 1105px;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 0 0 -11px 37px;
+  }
+
+  /* Company logo */
+  .logo {
+    aspect-ratio: 7.09;
+    object-fit: contain;
+    object-position: center;
+    width: 306px;
+    align-self: center;
+    margin-left: 57px;
+    max-width: 100%;
+  }
+  /* Highlight banner styling */
+  .highlight-banner {
+    background-color: rgba(255, 219, 94, 1);
+    align-self: center;
+    margin-top: 42px;
+    width: 540px;
+    max-width: 100%;
+    color: rgba(51, 37, 108, 1);
+    padding: 7px 21px;
+    text-align: center;
+    font: 25px Gilroy-Bold, sans-serif;
+  }
+  /* Text content styling */
+  .text-content {
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 0 80px 0 16px;
+  }
+  /* Main heading styling */
+  .main-heading {
+    font: 73px/82px Gilroy-Heavy, sans-serif;
+  }
+  /* Accent text styling */
+  .accent-text {
+    font-family: Gilroy-HeavyItalic, -apple-system, Roboto, Helvetica,
+      sans-serif;
+    text-decoration: underline;
+    color: rgba(255, 88, 17, 1);
+  }
+  /* Subheading styling */
+  .subheading {
+    align-self: start;
+    margin: 37px 0 0 54px;
+    font: 25px Gilroy-Medium, sans-serif;
+  }
+  /* Highlight text styling */
+  .highlight-text {
+    text-decoration: underline;
+    color: rgba(255, 238, 88, 1);
+  }
+  /* Hero image styling */
+  .hero-image {
+    aspect-ratio: 1.81;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    margin-top: 37px;
+  }
+  /* Media queries for responsive design */
+  @media (max-width: 991px) {
+    .hero-container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .content-wrapper {
+      margin-bottom: 10px;
+    }
+
+    .highlight-banner {
+      max-width: 100%;
+      padding-left: 20px;
+      margin-top: 40px;
+    }
+
+    .text-content {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+
+    .main-heading {
+      max-width: 100%;
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .subheading {
+      max-width: 100%;
+    }
+
+    .hero-image {
+      max-width: 100%;
+    }
+  }
+  /* Additional styles for pitch section */
+  .pitch-perfect-container {
+    background-color: #221e3a;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 150px;
+    padding: 0 0 37px 80px;
+  }
+  /* Layout for split sections */
+  .split-layout {
+    gap: 20px;
+    display: flex;
+  }
+  /* Left column styling */
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 38%;
+  }
+  /* Image container for product images */
+  .image-container {
+    flex-grow: 1;
+  }
+  /* Image grid layout */
+  .image-grid {
+    gap: 20px;
+    display: flex;
+  }
+  /* Accent column for additional styling */
+  .accent-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 10%;
+    z-index: -999;
+  }
+  /* Yellow block styling */
+  .yellow-block {
+    background-color: rgba(255, 220, 94, 1);
+    display: flex;
+    padding-top: 63px;
+    flex-direction: column;
+    align-self: stretch;
+    margin: auto -162px auto 0;
+  }
+  /* Orange block styling */
+  .orange-block {
+    background-color: rgba(255, 88, 17, 1);
+    z-index: 10;
+    display: flex;
+    height: 100px;
+  }
+  /* Product column styling */
+  .product-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    margin-left: 20px;
+  }
+  /* Product image styling */
+  .product-image {
+    aspect-ratio: 0.73;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+  /* Info column styling */
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    margin-left: 20px;
+  }
+  /* Info content styling */
+  .info-content {
+    display: flex;
+
+    flex-direction: column;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  /* Promo banner styling */
+  .promo-banner {
+    border-radius: 8px;
+    background-color: rgba(255, 219, 94, 1);
+    text-align: center;
+    padding: 2px 24px 1px;
+    font: 600 20px/2 Montserrat, sans-serif;
+  }
+  /* Promo text styles */
+
+  .promo-text-primary {
+    font-weight: 700;
+    color: rgba(49, 40, 107, 1);
+  }
+
+  .promo-text-secondary {
+    color: rgba(49, 40, 107, 1);
+  }
+
+  .promo-text-highlight {
+    font-weight: 700;
+    text-decoration: underline;
+    color: rgba(255, 88, 17, 1);
+  }
+  /* Value proposition styling */
+  .value-proposition {
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    align-self: center;
+    margin-top: 21px;
+    font: 400 20px/40px Gilroy-Bold, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  /* Value highlight styling */
+  .value-highlight {
+    text-decoration: underline;
+    color: rgba(255, 238, 88, 1);
+  }
+  /* Call to action container */
+  .cta-container {
+    border-radius: 15px;
+    background-color: rgba(255, 88, 17, 1);
+    display: flex;
+    margin-top: 13px;
+    flex-direction: column;
+    padding: 18px 80px;
+  }
+  /* Primary CTA styling */
+  .cta-primary {
+    color: rgba(255, 255, 255, 1);
+    align-self: end;
+    font: 900 20px/2 Montserrat, sans-serif;
+  }
+  /* Secondary CTA styling */
+  .cta-secondary {
+    color: rgba(14, 7, 45, 1);
+    text-align: center;
+    text-transform: uppercase;
+    align-self: start;
+    font: 400 18px Gilroy-Bold, sans-serif;
+  }
+  /* Price image styling */
+  .price-image {
+    aspect-ratio: 8.62;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    align-self: center;
+    max-width: 100%;
+    margin: 18px 0 0 47px;
+  }
+
+  .investment-text {
+    color: rgba(255, 255, 255, 1);
+    align-self: center;
+    margin-top: 13px;
+    font: 400 40px/1 Gilroy-Bold, sans-serif;
+  }
+  /* Warning message styling */
+  .warning-message {
+    color: rgba(255, 255, 255, 1);
+    margin: 16px 33px 0;
+    font: 700 15px/2 Montserrat, sans-serif;
+  }
+  /* Highlighted warning text */
+  .warning-highlight {
+    font-family: Gilroy-Bold, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgba(255, 220, 94, 1);
+  }
+
+  /* Regular warning text */
+  .warning-text {
+    font-family: Gilroy-Bold, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+  }
+  /* Media queries for responsive design */
+  @media (max-width: 991px) {
+    .pitch-perfect-container {
+      padding-left: 20px;
+    }
+
+    .content-wrapper {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+
+    .split-layout {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .left-column {
+      width: 100%;
+    }
+
+    .image-container {
+      margin-top: 40px;
+    }
+
+    .image-grid {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .accent-column {
+      width: 100%;
+    }
+
+    .yellow-block {
+      margin-top: 40px;
+    }
+
+    .product-column {
+      width: 100%;
+    }
+
+    .info-column {
+      width: 100%;
+    }
+
+    .info-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+
+    .promo-banner {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .value-proposition {
+      max-width: 100%;
+    }
+
+    .cta-container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .cta-primary {
+      max-width: 100%;
+    }
+
+    .warning-message {
+      max-width: 100%;
+      margin-right: 10px;
+    }
+  }
+  /* Content wrapper styling */
+  .content-wrapper {
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+  }
+  /* Content grid layout */
+  .content-grid {
+    gap: 20px;
+    display: flex;
+  }
+
+  /* Left column styling */
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  /* Left content styling */
+  .left-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  /* Top card styling */
+  .top-card {
+    border-radius: 9px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 42px 5px;
+  }
+
+  /* Featured image styling */
+  .featured-image {
+    aspect-ratio: 1.79;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+  }
+
+  /* Bottom card styling */
+  .bottom-card {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin-top: 16px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 23px 5px;
+  }
+
+  /* Secondary image styling */
+  .secondary-image {
+    display: flex;
+    height: 145px;
+  }
+
+  /* Right column styling */
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  /* Right content styling */
+  .right-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top image styling */
+  .top-image {
+    aspect-ratio: 1.21;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Bottom image styling */
+  .bottom-image {
+    aspect-ratio: 3.29;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+
+  /* Media queries for responsive design */
+  @media (max-width: 991px) {
+    .content-grid {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .left-column {
+      width: 100%;
+    }
+    .left-content {
+      max-width: 100%;
+      margin-top: 14px;
+    }
+    .top-card {
+      max-width: 100%;
+    }
+    .featured-image {
+      max-width: 100%;
+    }
+    .bottom-card {
+      max-width: 100%;
+    }
+    .secondary-image {
+      max-width: 100%;
+    }
+    .right-column {
+      width: 100%;
+    }
+    .right-content {
+      max-width: 100%;
+      margin-top: 14px;
+    }
+    .top-image {
+      max-width: 100%;
+      margin-right: 2px;
+    }
+    .bottom-image {
+      max-width: 100%;
+    }
+  }
+
+  /* Additional styles for the hero section */
+  .hero-container {
+    background-color: #3a3271;
+    display: flex;
+    margin-left: 19px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    font-size: 45px;
+    color: #fff;
+    font-weight: 400;
+    margin: 35px;
+  }
+
+  /* Hero title styling */
+
+  .hero-title {
+    font: 45px/55px Gilroy-ExtraBold, sans-serif;
+    align-self: stretch;
+  }
+  /* Hero subtitle styling */
+  .hero-subtitle {
+    font: 45px/1 Gilroy-Bold, sans-serif;
+    text-align: center;
+    margin-top: 25px;
+  }
+  /* Highlight text styling */
+  .highlight-text {
+    font-family: Gilroy-ExtraBold, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  /* Highlight underline styling */
+  .highlight-underline {
+    font-family: Gilroy-ExtraBold, -apple-system, Roboto, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: #ff5811;
+  }
+
+  /* Hero description styling */
+
+  .hero-description {
+    text-align: center;
+    margin-top: 32px;
+    padding: 15px;
+    font: 28px/1 Gilroy-SemiBold, sans-serif;
+  }
+
+  /* Media queries for responsive design */
+  @media (max-width: 991px) {
+    .hero-container {
+      font-size: 40px;
+    }
+
+    .hero-title {
+      max-width: 100%;
+      font-size: 40px;
+      line-height: 54px;
+    }
+
+    .hero-subtitle {
+      max-width: 100%;
+      font-size: 40px;
+    }
+
+    .hero-description {
+      max-width: 100%;
+    }
+  }
+  /* Search container styling */
+  .search-container {
+    background: var(
+      --Linear,
+      linear-gradient(153deg, #221e3a 1.78%, #43349d 83.03%)
+    );
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    padding: 55px 35px 28px;
+  }
+  /* Search header styling */
+  .search-header {
+    align-self: center;
+    display: flex;
+    width: 125px;
+    max-width: 100%;
+    gap: 12px;
+
+    color: #fff;
+    font: 400 35px/1 Gilroy-ExtraBold, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+
+  .search-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 36px;
+    align-self: start;
+  }
+
+  .search-description {
+    color: #fff;
+    text-align: center;
+    align-self: start;
+    margin: 46px 0 0 21px;
+    font: 400 25px/35px Gilroy-Medium, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+
+  .results-container {
+    background-color: #fff;
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: start;
+    padding: 12px 80px 20px;
+  }
+
+  .results-image {
+    aspect-ratio: 1.03;
+    object-fit: contain;
+    object-position: center;
+    width: 329px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .search-container {
+      max-width: 100%;
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+
+    .search-header {
+      white-space: initial;
+    }
+
+    .search-description {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+
+    .results-container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .panel-container {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .panel-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  .panel-left {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin: 0;
+  }
+  @media (max-width: 991px) {
+    .panel-left {
+      width: 100%;
+    }
+  }
+  .gradient-panel-left {
+    background: var(
+      --Linear,
+      linear-gradient(153deg, #221e3a 1.78%, #43349d 83.03%)
+    );
+    display: flex;
+    width: 582px;
+    max-width: 100%;
+    height: 655px;
+    margin: 0 auto;
+  }
+  @media (max-width: 991px) {
+    .gradient-panel-left {
+      margin-top: 30px;
+    }
+  }
+  .panel-right {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .panel-right {
+      width: 100%;
+    }
+  }
+  .gradient-panel-right {
+    background: var(
+      --Linear,
+      linear-gradient(153deg, #221e3a 1.78%, #43349d 83.03%)
+    );
+    display: flex;
+    width: 582px;
+    max-width: 100%;
+    height: 655px;
+    margin: 0 auto;
+  }
+  @media (max-width: 991px) {
+    .gradient-panel-right {
+      margin-top: 30px;
+    }
+  }
+  /* Pitch container styling */
+  .pitch-container {
+    background: var(
+      --Linear,
+      linear-gradient(153deg, #221e3a 1.78%, #43349d 83.03%)
+    );
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 57px 35px 28px;
+  }
+  /* Pitch header styling */
+  .pitch-header {
+    display: flex;
+    width: 141px;
+    max-width: 100%;
+    gap: 12px;
+    color: #fff;
+    white-space: nowrap;
+    font: 400 35px/1 Gilroy-ExtraBold, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+
+  .pitch-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 32px;
+    align-self: start;
+  }
+
+  .pitch-description {
+    color: #fff;
+    text-align: center;
+    margin-top: 47px;
+    font: 400 25px/35px Gilroy-Medium, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+
+  .preview-container {
+    background-color: #fff;
+    align-self: stretch;
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 24px 80px 12px;
+  }
+
+  .preview-image {
+    aspect-ratio: 1.02;
+    object-fit: contain;
+    object-position: center;
+    width: 321px;
+    max-width: 100%;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  @media (max-width: 991px) {
+    .pitch-container {
+      max-width: 100%;
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+
+    .pitch-header {
+      white-space: initial;
+    }
+
+    .pitch-description {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+
+    .preview-container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Gilroy-SemiBold, sans-serif;
+    color: rgba(51, 37, 108, 1);
+    font-weight: 400;
+  }
+
+  .stats-heading {
+    font-size: 55px;
+    line-height: 60px;
+    text-align: center;
+    z-index: 10;
+    margin-top: -5px;
+    width: 648px;
+  }
+
+  .stats-highlight {
+    text-decoration: underline;
+    color: rgba(61, 168, 91, 1);
+  }
+
+  .stats-subheading {
+    font-size: 25px;
+    line-height: 1.4;
+    margin-top: 22px;
+  }
+
+  .stats-image-section {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    position: relative;
+    min-height: 343px;
+    margin-top: 30px;
+    width: 100%;
+    align-items: start;
+    font-size: 30px;
+    justify-content: center;
+    padding: 94px 80px;
+  }
+
+  .stats-background {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .stats-content {
+    position: relative;
+    display: flex;
+    width: 496px;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .stats-growth {
+    line-height: 1;
+  }
+
+  .stats-impact {
+    line-height: 35px;
+    align-self: start;
+    margin-top: 22px;
+  }
+
+  @media (max-width: 991px) {
+    .stats-heading {
+      max-width: 100%;
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    .stats-image-section {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .stats-growth,
+    .stats-impact {
+      max-width: 100%;
+    }
+  }
+  /* Visually hidden class for accessibility */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .image-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-image {
+    aspect-ratio: 1.31;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .content-image {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Page</title>
+  </head>
+  <body>
+    <main>
+      <div class="hero-container" style="background-color: #fff">
+        <img loading="lazy" src="img/img1.svg" class="hero-background" alt="" />
+
+        <div class="content-wrapper">
+          <img
+            loading="lazy"
+            src="./img/img2.svg"
+            class="logo"
+            alt="Company Logo"
+          />
+          <div class="highlight-banner">LOCAL MARKETER'S NEW SECRET WEAPON</div>
+          <div class="text-content">
+            <div class="main-heading">
+              AI Finds Local Biz Owners Who Need Help and
+              <span class="accent-text"> Sells Your Services </span>
+              For You!
+            </div>
+            <div class="subheading">
+              Save hours of work, thousands of dollars and
+              <span class="highlight-text">
+                win new clients every single day!
+              </span>
+            </div>
+          </div>
+          <img
+            loading="lazy"
+            src="./img/img3.png"
+            class="hero-image"
+            alt="Product demonstration"
+          />
+        </div>
+      </div>
+
+      <div class="pitch-perfect-container">
+        <div class="content-wrapper">
+          <div class="split-layout">
+            <div class="left-column">
+              <div class="image-container">
+                <div class="image-grid">
+                  <div class="accent-column">
+                    <div class="yellow-block">
+                      <div class="orange-block"></div>
+                    </div>
+                  </div>
+                  <div class="product-column">
+                    <img
+                      loading="lazy"
+                      src="./img/img4.png"
+                      class="product-image"
+                      alt="PitchPerfect AI Product Showcase"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-column">
+              <div class="info-content">
+                <div class="promo-banner">
+                  <span class="promo-text-primary">Commercial Rights</span>
+                  <span class="promo-text-secondary">Included For</span>
+                  <span class="promo-text-highlight">Limited Time</span>
+                </div>
+                <div class="value-proposition">
+                  Save hours of work, thousands of dollars and
+                  <span class="value-highlight"
+                    >win new clients every single day!</span
+                  >
+                </div>
+                <div class="cta-container">
+                  <div class="cta-primary">GET ACCESS TO PITCHPERFECT AI</div>
+                  <div class="cta-secondary">
+                    LOCAL MARKETER'S NEW SECRET WEAPON
+                  </div>
+                </div>
+                <img
+                  loading="lazy"
+                  src="./img/onetimepayment.png"
+                  class="price-image"
+                  alt="Special Pricing Offer"
+                />
+                <div class="warning-message">
+                  <span class="warning-highlight">Warning:</span>
+                  <span class="warning-text"
+                    >The price is rising every hour soon, act now to get the
+                    best deal possible!</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="content-grid">
+          <div class="left-column">
+            <div class="left-content">
+              <div class="top-card">
+                <img
+                  loading="lazy"
+                  src="./img/img5.png"
+                  class="featured-image"
+                  alt="Featured content visualization"
+                />
+              </div>
+              <div class="bottom-card">
+                <div
+                  class="secondary-image"
+                  role="img"
+                  aria-label="Secondary content visualization"
+                >
+                  <img
+                    loading="lazy"
+                    src="img/lh.png"
+                    class="featured-image"
+                    alt="Featured content visualization"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-column">
+            <div class="right-content">
+              <img
+                loading="lazy"
+                src="./img/img6.png"
+                class="top-image"
+                alt="Top section illustration"
+              />
+              <img
+                loading="lazy"
+                src="./img/img7.png"
+                class="bottom-image"
+                alt="Bottom section illustration"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-container">
+        <div class="hero-title">
+          Run Your Local Agency with Next-Gen AI Tools
+          <br />
+        </div>
+        <div class="hero-subtitle">
+          <span class="highlight-text">Effortlessly</span>
+          <span class="highlight-underline"
+            >Find, Pitch, Close, and Serve...</span
+          >
+        </div>
+        <div class="hero-description">
+          and Witness the Surge of Clients Coming Your Way!
+        </div>
+
+        <div>
+          <div class="panel-container">
+            <div class="panel-left">
+              <div
+                class="gradient-panel-left"
+                tabindex="0"
+                role="region"
+                aria-label="Left panel content"
+              >
+                <div class="search-container">
+                  <div class="search-header">
+                    <img
+                      loading="lazy"
+                      src="./img/img8.svg"
+                      class="search-icon"
+                      alt="Search functionality icon"
+                    />
+                    <div role="heading" aria-level="2" tabindex="0">FIND</div>
+                  </div>
+                  <div class="search-description" tabindex="0">
+                    Just type in a niche and watch as tons of local businesses
+                    pop up, all needing your expertise.
+                  </div>
+                  <div class="results-container">
+                    <img
+                      loading="lazy"
+                      src="./img/img9.svg"
+                      class="results-image"
+                      alt="Search results visualization"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-right">
+              <div
+                class="gradient-panel-right"
+                tabindex="0"
+                role="region"
+                aria-label="Right panel content"
+              >
+                <div class="pitch-container">
+                  <div class="pitch-header">
+                    <img
+                      loading="lazy"
+                      src="./img/img10.svg"
+                      class="pitch-icon"
+                      alt="Pitch section icon"
+                    />
+                    <div role="heading" aria-level="2" tabindex="0">PITCH</div>
+                  </div>
+                  <div class="pitch-description" tabindex="0">
+                    Let the AI whip up tailored pitch pages, pinpointing exactly
+                    where a business can shine brighter.
+                  </div>
+                  <div class="preview-container">
+                    <img
+                      loading="lazy"
+                      src="./img/img11.svg"
+                      class="preview-image"
+                      alt="AI generated pitch page preview"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="panel-container">
+              <div class="panel-left">
+                <div
+                  class="gradient-panel-left"
+                  tabindex="0"
+                  role="region"
+                  aria-label="Left panel content"
+                >
+                  <div class="search-container">
+                    <div class="search-header">
+                      <img
+                        loading="lazy"
+                        src="./img/img12.png"
+                        class="search-icon"
+                        alt="Search functionality icon"
+                      />
+                      <div role="heading" aria-level="2" tabindex="0">
+                        CLOSE
+                      </div>
+                    </div>
+                    <div class="search-description" tabindex="0">
+                      Sealing the deal is now a snap! With top-notch tools and
+                      tips, you're primed to impress and succeed.
+                    </div>
+                    <div class="results-container">
+                      <img
+                        loading="lazy"
+                        src="./img/img13.svg"
+                        class="results-image"
+                        alt="Search results visualization"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-right">
+                <div
+                  class="gradient-panel-right"
+                  tabindex="0"
+                  role="region"
+                  aria-label="Right panel content"
+                >
+                  <div class="pitch-container">
+                    <div class="pitch-header">
+                      <img
+                        loading="lazy"
+                        src="./img/img14.png"
+                        class="pitch-icon"
+                        alt="Pitch section icon"
+                      />
+                      <div role="heading" aria-level="2" tabindex="0">
+                        SERVE
+                      </div>
+                    </div>
+                    <div class="pitch-description" tabindex="0">
+                      Locked them in? Great! Now let the AI tools craft perfect
+                      content, making sure your service stands out big time.
+                    </div>
+                    <div class="preview-container">
+                      <img
+                        loading="lazy"
+                        src="./img/img15.png"
+                        class="preview-image"
+                        alt="AI generated pitch page preview"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-container">
+        <div class="stats-heading">
+          There are
+          <span class="stats-highlight">32 Million</span>
+          local businesses out there 🙂
+        </div>
+        <div class="stats-subheading">And that's just in the US alone…</div>
+        <div class="stats-image-section">
+          <img
+            loading="lazy"
+            src="./img/img16.png"
+            class="stats-background"
+            alt="Business growth visualization background"
+          />
+          <div class="stats-content">
+            <div class="stats-growth">… with more popping up each day…</div>
+            <div class="stats-impact">
+              … which means there is a STAGGERING amount of clients who need
+              your help.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
